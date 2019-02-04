@@ -1,2 +1,4 @@
-# 2012-KAI
-Wordpress theme　Twenty Twelve　2012　改
+# _z 
+## 更改于 Wordpress theme　Twenty Twelve
+
+2012　改

@@ -4,7 +4,7 @@ Theme URI: https://wordpress.org/themes/twentytwelve/
 Author: the WordPress team
 Author URI: https://wordpress.org/
 Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
-Version: 2.5
+Version: 2.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -52,13 +52,23 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 /* =Reset
 -------------------------------------------------------------- */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 16px;;
 	vertical-align: baseline;
 }
+body .sticky header::before, body a:hover, body a:focus, body a:active, body .main-navigation .menu-wrapper > ul > li.current-menu-item > a, body .main-navigation .menu-wrapper > ul > li:hover > a, body .main-navigation .menu-wrapper > ul > li:focus > a, body .sidr a:hover, body .sidr a:focus, body .page-numbers.current {
+    color: #ff2222;
+}
+a:visited {
+	color: blueviolet;
+}
+a:focus {
+	outline: none;
+}
+  
 body {
 	line-height: 1;
 }
@@ -102,7 +112,7 @@ html {
 	-ms-text-size-adjust: 100%;
 }
 a:focus {
-	outline: thin dotted;
+	outline: none;
 }
 article,
 aside,
@@ -185,20 +195,18 @@ img {
 .widget-title,
 .entry-content th,
 .comment-content th {
-	font-size: 11px;
-	font-size: 0.785714286rem;
+	font-size: 24px;
 	line-height: 2.181818182;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #636363;
+	color: #000000;
 }
 
 /* Shared Post Format styling */
 article.format-quote footer.entry-meta,
 article.format-link footer.entry-meta,
 article.format-status footer.entry-meta {
-	font-size: 11px;
-	font-size: 0.785714286rem;
+	font-size: 16px;
 	line-height: 2.181818182;
 }
 
@@ -207,12 +215,9 @@ button,
 input,
 select,
 textarea {
-	background-color: rgba(0,0,0,.1);
-	border: 0px solid;
-	border-radius: 3px;
-	font-family: inherit;
-	padding: 6px;
-	padding: 0.428571429rem;
+	border: 1px solid #000000;
+	border-radius: 2rem;
+	padding: 10px;
 }
 button,
 input {
@@ -243,18 +248,16 @@ input[type="button"],
 input[type="reset"],
 article.post-password-required input[type=submit],
 .bypostauthor cite span {
-	border: 1px solid #1da1f2;
-	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
-	background-color: #fff;
-	-webkit-border-radius: 2rem;
+	padding: 6px 10px;
+	padding: 0.428571429rem 0.714285714rem;
+	font-size: 14px;
+	line-height: 1.428571429;
+	font-weight: normal;
+	background-color: #ffffff;
+	background-repeat: repeat-x;
+	border: 1px solid #000000;
 	border-radius: 2rem;
-	display: inline-block;
-	margin: 0 .2rem;
-	max-width: 75%;
-	padding-right: 14px;
-	padding-left: 14px;
-	position: relative;
-	word-wrap: break-word;
+	padding: 10px 20px;
 }
 .menu-toggle,
 button,
@@ -274,8 +277,8 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 article.post-password-required input[type=submit]:hover {
-	background-color: #fff;
-	border: 1px solid #000;
+	color: #5e5e5e;
+	background-repeat: repeat-x;
 }
 .menu-toggle:active,
 .menu-toggle.toggled-on,
@@ -283,7 +286,11 @@ button:active,
 input[type="submit"]:active,
 input[type="button"]:active,
 input[type="reset"]:active {
-	background-color: #fff;
+	color: #757575;
+	background-repeat: repeat-x;
+	border-color: transparent;
+	border: 1px solid #000000;
+	padding: 10px 20px;
 }
 .bypostauthor cite span {
 	color: #fff;
@@ -443,7 +450,7 @@ img.wp-smiley,
 }
 .author-description p {
 	color: #757575;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 }
@@ -467,19 +474,15 @@ html {
 body {
 	font-size: 14px;
 	font-size: 1rem;
-	font-family: Helvetica, Arial, sans-serif;
 	text-rendering: optimizeLegibility;
 	color: #444;
 }
-body.custom-font-enabled {
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-}
-a {
-	outline: none;
-	color: #21759b;
-}
 a:hover {
 	color: #0f3647;
+}
+a:link {
+    text-decoration: none;
+    color: blue;
 }
 
 /* Assistive text */
@@ -543,8 +546,9 @@ a:hover {
 }
 .site-header h1 a:hover,
 .site-header h2 a:hover {
-	color: #21759b;
+	color: blue;
 }
+
 .site-header h1 {
 	font-size: 24px;
 	font-size: 1.714285714rem;
@@ -554,7 +558,7 @@ a:hover {
 }
 .site-header h2 {
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 	color: #757575;
@@ -607,11 +611,6 @@ section[role="banner"] {
 	margin-bottom: 48px;
 	margin-bottom: 3.428571429rem;
 	word-wrap: break-word;
-
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	background: #f8f9fa;
-	padding: 20px;
 }
 .widget-area .widget h3 {
 	margin-bottom: 24px;
@@ -620,7 +619,7 @@ section[role="banner"] {
 .widget-area .widget p,
 .widget-area .widget li,
 .widget-area .widget .textwidget {
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 }
@@ -646,13 +645,13 @@ section[role="banner"] {
 	margin-left: 2.571428571rem;
 }
 .widget-area .widget a {
-	color: #757575;
+	color: blue ;
 }
 .widget-area .widget a:hover {
-	color: #21759b;
+	color: #ff2222;
 }
 .widget-area .widget a:visited {
-	color: #9f9f9f;
+	color: blueviolet;
 }
 .widget-area #s {
 	width: 53.66666666666%; /* define a width to avoid dropping a wider submit button */
@@ -665,10 +664,10 @@ footer[role="contentinfo"] {
 	font-size: 12px;
 	font-size: 0.857142857rem;
 	line-height: 2;
-	max-width: 90%;
-	max-width: 90%;
 	margin-top: 24px;
 	margin-top: 1.714285714rem;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 24px 0;
 	padding: 1.714285714rem 0;
 }
@@ -676,7 +675,7 @@ footer[role="contentinfo"] a {
 	color: #686868;
 }
 footer[role="contentinfo"] a:hover {
-	color: #21759b;
+	color: #ff2222;
 }
 .site-info span[role=separator] {
 	padding: 0 0.3em 0 0.6em;
@@ -701,13 +700,15 @@ footer[role="contentinfo"] a:hover {
 	margin-bottom: 1.714285714rem;
 }
 .entry-header .entry-title {
-	font-size: 20px;
+	font-size: 24px;
 	font-size: 1.428571429rem;
 	line-height: 1.2;
-	font-weight: normal;
+	font-weight: bold;
 }
 .entry-header .entry-title a {
 	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
 }
 .entry-header .entry-format {
 	margin-top: 24px;
@@ -717,24 +718,24 @@ footer[role="contentinfo"] a:hover {
 .entry-header .comments-link {
 	margin-top: 24px;
 	margin-top: 1.714285714rem;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 	color: #757575;
 }
 .comments-link a,
 .entry-meta a {
-	color: #757575;
+	color: blue;
 }
 .comments-link a:hover,
 .entry-meta a:hover {
-	color: #21759b;
+	color: #ff2222;
 }
 article.sticky .featured-post {
 	border-top: 4px double #ededed;
 	border-bottom: 4px double #ededed;
 	color: #757575;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 3.692307692;
 	margin-bottom: 24px;
@@ -789,7 +790,7 @@ article.sticky .featured-post {
 }
 .entry-content h5,
 .comment-content h5 {
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 }
@@ -809,22 +810,13 @@ article.sticky .featured-post {
 }
 .entry-content a:visited,
 .comment-content a:visited {
-	color: #9f9f9f;
+	color: blueviolet;
 }
 .entry-content .more-link {
 	white-space: nowrap;
-}
-.more-link {
-	background-color: #fff;
-    border: 1px solid #000;
-    -webkit-border-radius: 2rem;
-    border-radius: 2rem;
-    display: inline-block;
-    margin: 0 .2rem;
-    max-width: 75%;
-    padding: 10px 14px;
-    position: relative;
-    word-wrap: break-word;
+	border: 1px solid #000;
+	border-radius: 2rem;
+	padding: 10px 14px
 }
 .entry-content ol,
 .comment-content ol,
@@ -866,7 +858,7 @@ article.sticky .featured-post {
 	margin-bottom: 1.714285714rem;
 	padding: 24px;
 	padding: 1.714285714rem;
-	font-style: italic;
+	/* font-style: italic; */
 }
 .entry-content blockquote p:last-child,
 .comment-content blockquote p:last-child {
@@ -878,27 +870,30 @@ article.sticky .featured-post {
 	font-size: 12px;
 	font-size: 0.857142857rem;
 	line-height: 2;
+	margin: 0 2px;
+    padding: 0px 5px;
+    background-color: #eeeeee;
+    border-radius: 3px;
 }
 .entry-content pre,
 .comment-content pre {
 	color: #666;
-	font-family: Consolas, Monaco, Lucida Console, monospace;
-	font-size: 12px;
-	font-size: 0.857142857rem;
-	line-height: 1.714285714;
-	margin: 24px 0;
-	margin: 1.714285714rem 0;
-	overflow: auto;
-	padding: 24px;
-	padding: 1.714285714rem;
-
-	margin-bottom: 48px;
-	margin-bottom: 3.428571429rem;
-	word-wrap: break-word;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	background: #f8f9fa;
-	padding: 20px;
+    font-family: Consolas, Monaco, Lucida Console, monospace;
+    font-size: 12px;
+    font-size: 0.857142857rem;
+    line-height: 1.714285714;
+    margin: 24px 0;
+    margin: 1.714285714rem 0;
+    overflow: auto;
+    padding: 24px;
+    padding: 1.714285714rem;
+    margin-bottom: 48px;
+    margin-bottom: 3.428571429rem;
+    word-wrap: break-word;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: #eeeeee;
+    padding: 20px;
 }
 .entry-content pre code,
 .comment-content pre code {
@@ -985,15 +980,15 @@ img.aligncenter,
 	padding: 6px 10px 6px 0;
 }
 .site-content article {
-	
-	flex-direction: column;
-	border: 1px solid #dadce0;
-	border-radius: 8px;
-	position: relative;
-	background: #fff;
-
-	padding: 20px;
-	margin-bottom: 20px;
+	border-bottom: 1px double #ededed;
+	margin-bottom: 72px;
+	margin-bottom: 5.142857143rem;
+	padding-bottom: 24px;
+	padding-bottom: 1.714285714rem;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 .page-links {
 	clear: both;
@@ -1002,8 +997,7 @@ img.aligncenter,
 footer.entry-meta {
 	margin-top: 24px;
 	margin-top: 1.714285714rem;
-	font-size: 13px;
-	font-size: 0.928571429rem;
+	font-size: 16px;
 	line-height: 1.846153846;
 	color: #757575;
 }
@@ -1093,7 +1087,7 @@ article.format-aside .aside {
 	border-left: 22px solid #a8bfe8;
 }
 article.format-aside p {
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 	color: #4a5466;
@@ -1109,13 +1103,13 @@ article.format-aside p:last-child {
 
 /* Image posts */
 article.format-image footer h1 {
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 	font-weight: normal;
 }
 article.format-image footer h2 {
-	font-size: 11px;
+	font-size: 16px;
 	font-size: 0.785714286rem;
 	line-height: 2.181818182;
 }
@@ -1128,7 +1122,7 @@ article.format-link header {
 	padding: 0 10px;
 	padding: 0 0.714285714rem;
 	float: right;
-	font-size: 11px;
+	font-size: 16px;
 	font-size: 0.785714286rem;
 	line-height: 2.181818182;
 	font-weight: bold;
@@ -1190,10 +1184,10 @@ article.format-quote .entry-content blockquote {
 	margin: 0;
 }
 .format-status .entry-header header a {
-	color: #757575;
+	color: blue;
 }
 .format-status .entry-header header a:hover {
-	color: #21759b;
+	color: #ff2222;
 }
 .format-status .entry-header img {
 	float: left;
@@ -1298,7 +1292,7 @@ article.format-quote .entry-content blockquote {
 a.comment-reply-link,
 a.comment-edit-link {
 	color: #686868;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 }
@@ -1355,6 +1349,11 @@ a.comment-edit-link:hover {
 	padding: 10px;
 	padding: 0.714285714rem;
 	width: 100%;
+
+	border: 1px solid #000000;
+    box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+    -webkit-border-radius: 2rem;
+    border-radius: 2rem;
 }
 #respond form p.form-allowed-tags {
 	margin: 0;
@@ -1396,7 +1395,7 @@ a.comment-edit-link:hover {
 .template-front-page .widget-area .widget li {
 	margin: 8px 0 0;
 	margin: 0.571428571rem 0 0;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.714285714;
 	list-style-type: square;
@@ -1429,7 +1428,7 @@ a.comment-edit-link:hover {
 .widget_recent_entries .post-date,
 .widget_rss .rss-date {
 	color: #aaa;
-	font-size: 11px;
+	font-size: 16px;
 	font-size: 0.785714286rem;
 	margin-left: 12px;
 	margin-left: 0.857142857rem;
@@ -1437,7 +1436,7 @@ a.comment-edit-link:hover {
 #wp-calendar {
 	margin: 0;
 	width: 100%;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 	color: #686868;
@@ -1454,26 +1453,9 @@ a.comment-edit-link:hover {
 }
 .widget_search label {
 	display: block;
-	font-size: 13px;
+	font-size: 16px;;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
-}
-.searchform button,
-input,
-select,
-textarea {
-	border: 1px solid #1da1f2;
-	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
-	background-color: #fff;
-	-webkit-border-radius: 2rem;
-	border-radius: 2rem;
-	display: inline-block;
-	margin: 0 .2rem;
-	max-width: 75%;
-	padding-right: 14px;
-	padding-left: 14px;
-	position: relative;
-	word-wrap: break-word;
 }
 .widget_twitter li {
 	list-style-type: none;
@@ -1485,11 +1467,9 @@ textarea {
 .tagcloud ul {
 	list-style-type: none;
 }
-
 .tagcloud ul li {
 	display: inline-block;
 }
-
 .widget-area .widget.widget_tag_cloud li {
 	line-height: 1;
 }
@@ -1548,12 +1528,11 @@ img#wpstats {
 	.site {
 		margin: 0 auto;
 		max-width: 90%;
-		max-width: 90%;
 		overflow: hidden;
 	}
 	.site-content {
 		float: left;
-		width: 70%;
+		width: 65.104166667%;
 	}
 	body.template-front-page .site-content,
 	body.attachment .site-content,
@@ -1562,11 +1541,12 @@ img#wpstats {
 	}
 	.widget-area {
 		float: right;
-		width: 25%;
+		width: 26.041666667%;
 	}
 	.site-header h1,
 	.site-header h2 {
 		text-align: left;
+		font-size: 16px;
 	}
 	.site-header h1 {
 		font-size: 26px;
@@ -1588,26 +1568,23 @@ img#wpstats {
 	.main-navigation li {
 		display: inline-block;
 		text-decoration: none;
+		font-size: 16px;
 	}
 	.main-navigation li a {
 		border-bottom: 0;
 		color: #6a6a6a;
 		line-height: 3.692307692;
-		/* text-transform: uppercase; */
+		text-transform: uppercase;
 		white-space: nowrap;
-		padding-left: 10px;
-		padding-right: 10px;
 	}
 	.main-navigation li a:hover,
 	.main-navigation li a:focus {
 		color: #000;
-		background: #e3e3e3;
 	}
 	.main-navigation li {
 		margin: 0 40px 0 0;
 		margin: 0 2.857142857rem 0 0;
 		position: relative;
-		background: #f8f9fa;
 	}
 	.main-navigation li ul {
 		margin: 0;
@@ -1634,10 +1611,10 @@ img#wpstats {
 		width: inherit;
 	}
 	.main-navigation li ul li a {
-		background: #f8f9fa;
-		border-bottom: 1px solid #f8f9fa;
+		background: #efefef;
+		border-bottom: 1px solid #ededed;
 		display: block;
-		font-size: 11px;
+		font-size: 16px;
 		font-size: 0.785714286rem;
 		line-height: 2.181818182;
 		padding: 8px 10px;
@@ -1815,10 +1792,13 @@ img#wpstats {
 	.entry-title {
 		font-size: 21pt;
 	}
+	.entry-meta {
+		font-size: 16px;
+	}
 	footer.entry-meta,
 	footer.entry-meta a {
 		color: #444;
-		font-size: 10pt;
+		font-size: 16px;
 	}
 	.author-description {
 		float: none;
@@ -1844,11 +1824,11 @@ img#wpstats {
 	}
 }
 
-.thumbnailimage {
-	width: 100%;
-	height: auto;
+.unuslogosize {
+	display: block;
+	height: 65px;
+	width: 200px;
 }
-.thumbnailimage img {
-	width: 100%;
-	height: auto;
+.header_unus_ {
+	font-size: 12px;
 }

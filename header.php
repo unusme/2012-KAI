@@ -35,13 +35,20 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup style="margin-left: 1px;margin-right: 1px;">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title">
+				<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<img class="unuslogosize" src="<?php echo get_template_directory_uri(); ?>/assets/unusmelogo.svg">
+				</a>
+			</h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<h2 class="site-description">
-				如果需要讨论独立游戏相关技术 请访问:  <a href="https://igco.xyz"><u>Indie Game Community . </u> </a>
-				独立游戏社区 。
+			去 <a href="https://c.unus.me"><u class="header_unus_">　ＵＮＵＳ　ＣＥＮＴＥＲ　</u> </a> 查看更多内容，
+				如果需要讨论游戏相关技术 请访问:  <a href="https://e.unus.me"><u class="header_unus_">　Game Community . 　</u> </a>
+				游戏社区 。
 			</h2>
 		</hgroup>
+
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
@@ -52,13 +59,12 @@
 					'menu_class'     => 'nav-menu',
 				)
 			);
-?>
+			?>
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
-		
 	</header><!-- #masthead -->
 
 	<div id="main" class="wrapper">
