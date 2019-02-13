@@ -43,8 +43,10 @@
 			</h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<h2 class="site-description">
-			去 <a href="https://c.unus.me"><u class="header_unus_">　ＵＮＵＳ　ＣＥＮＴＥＲ　</u> </a> 查看更多内容，
-				如果需要讨论游戏相关技术 请访问:  <a href="https://e.unus.me"><u class="header_unus_">　Game Community . 　</u> </a>
+			你可以去 <a href="https://c.unus.me"><u style="color: blue;">　网站中心　</u> </a> 查看更多内容，
+			或者开始使用　<a href="https://sun.unus.me"><u style="color: blue;">　Sｕｎ　搜索引擎　</u> </a> ，
+			端对端加密的分散式 <a href="https://m.unus.me"><u style="color: blue;">　即时通讯　</u> </a> 服务 。
+			如果需要讨论游戏相关技术请访问<a href="https://e.unus.me"><u style="color: blue;">　Game Community . 　</u> </a>
 				游戏社区 。
 			</h2>
 		</hgroup>
