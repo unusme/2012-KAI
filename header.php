@@ -36,10 +36,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup style="margin-left: 1px;margin-right: 1px;">
 			<h1 class="site-title">
-				<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img class="unuslogosize" src="<?php echo get_template_directory_uri(); ?>/assets/unusmelogo.svg">
-				</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>	
 			</h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
